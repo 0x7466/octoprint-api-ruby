@@ -1,4 +1,5 @@
 # Octoprint API Client
+[![Build Status](https://travis-ci.org/tobiasfeistmantl/octoprint-api-ruby.svg?branch=master)](https://travis-ci.org/tobiasfeistmantl/octoprint-api-ruby)
 
 This client library makes it easy to use the Octoprint API in Ruby.
 
@@ -21,6 +22,16 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+```ruby
+require 'octoprint'
+
+octoprint = Octoprint.new('https://my-awesome-octoprint-server.com', 'MY_S3CURE_AP1_KEY')
+
+octoprint.api.version  # => {"api"=>"YOUR API VERSION", "server"=>"YOUR SERVER VERSION"}
+```
+
+### Wanna now more about the API?
+[API Reference of Octorint](http://docs.octoprint.org/en/master/api/index.html)
 
 ## Development
 

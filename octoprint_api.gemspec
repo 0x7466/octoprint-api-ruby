@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "octoprint_api/version"
+require "octoprint/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "octoprint_api"
-  spec.version       = OctoprintApi::VERSION
+  spec.version       = Octoprint::VERSION
   spec.authors       = ["Tobias Feistmantl"]
   spec.email         = ["tobias@feistmantl.io"]
 
@@ -24,4 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+
+  spec.add_dependency "faraday", "~> 0.14.0"
 end

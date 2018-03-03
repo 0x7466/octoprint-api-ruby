@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "octoprint_api"
+require "octoprint"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

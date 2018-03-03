@@ -2,11 +2,15 @@ PATH
   remote: .
   specs:
     octoprint_api (0.1.0)
+      faraday (~> 0.14.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.3)
+    faraday (0.14.0)
+      multipart-post (>= 1.2, < 3)
+    multipart-post (2.0.0)
     rake (10.5.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
