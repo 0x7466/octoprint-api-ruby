@@ -31,7 +31,7 @@ octoprint.api.version  # => {"api"=>"YOUR API VERSION", "server"=>"YOUR SERVER V
 ```
 
 ### Wanna now more about the API?
-[API Reference of Octorint](http://docs.octoprint.org/en/master/api/index.html)
+[API Reference of Octoprint](http://docs.octoprint.org/en/master/api/index.html)
 
 ## Development
 
