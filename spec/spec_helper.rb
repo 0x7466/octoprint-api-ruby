@@ -1,5 +1,7 @@
 require "bundler/setup"
 require "octoprint"
+require "webmock/rspec"
+require "json"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -23,15 +23,20 @@ class Octoprint
     def respond_to_missing?(method_name, include_private = false)
       return super unless name_qualified_for_api_request?(method_name)
       
-      super || _connection.get(generate_api_path(method_name))
+      unless super
+        response = _connection.get(generate_api_path(method_name))
+        return response.status != 404
+      end
+
+      super
     end
     
     private
 
     def _connection
       @_connection ||= Faraday.new url: @url do |conn|
-        conn.request :multipart
         conn.headers['X-Api-Key'] = @api_key
+        conn.headers['Content-Type'] = 'application/json'
         conn.adapter ::Faraday.default_adapter
       end
     end
